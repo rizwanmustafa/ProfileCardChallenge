@@ -5,11 +5,21 @@
 
 body{ background-color: hsl(185, 75%, 39%)}
 
-.svgDiv{ position: fixed;  z-index: -1;}
+.parentSVGDiv{
+	width: 100vw;
+	height: 100vh;
+	position:fixed;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	z-index: -1;
+}
 
-#topSVG{ transform: translate(-35%,-50%); }
+.svgDiv{ position: fixed; }
 
-#bottomSVG{ transform: translateX(55%) translateY(35%);}
+.topSVG{ transform: translate(-55%,-40%); }
+
+.bottomSVG{ transform: translate(45%, 50%); }
 
 .attribution { font-size: 11px; text-align: center; }
 
@@ -21,42 +31,50 @@ body{ background-color: hsl(185, 75%, 39%)}
 	justify-content: center;
 }
 
-#profileBGDiv{
+.colFlex{ flex-direction: column; }
+
+.profileBGDiv{
 	width: 100%;
 	height: 100vh;
 }
 
-#profileDiv{
+.profileDiv{
 	font-family: Kumbh-Sans;
 	font-size: 18px;
 	color: gray;
 	flex-direction: column;
 }
 
-#profileDiv b{ color: black;}
+.profileDiv b{ color: black;}
 
-#profileDiv hr{ border: none;  height: 1px; background-color: lightgray; }
+.profileDiv hr{ border: none;  height: 1px; background-color: lightgray; }
 
-#profileBGImg{
+.profileBGImg{
 	width: 100%;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 }
 
-#innerProfile{
+.innerProfile{
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 	text-align: center;
 	background-color: white;
 	width: 100%;
 }
-#transformDiv{
+.transformDiv{
 	transform: translateY(-20%);
 }
 
-#profilePic{
+.profilePic{
 	border-radius: 100%;
 	border: 5px solid white;
+	margin-bottom: 20px;
+}
+
+.location{
+padding: 10px 0px 20px 0px;
+font-size: 14px;
 }
 
 .miniStats{ padding: 10px; }
